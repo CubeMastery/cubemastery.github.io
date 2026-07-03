@@ -2064,7 +2064,7 @@ textarea.w-input, textarea.w-select {
   background-image: radial-gradient(circle, #0000003b 51%, #000), url("https://cdn.prod.website-files.com/67c60bc4fdf338751e5d36ca/67c669136e1a691c406db2ec_CubeMasteryLogo.png");
   background-position: 0 0, 50%;
   background-repeat: repeat, no-repeat;
-  background-size: auto, 40%;
+  background-size: auto, 30%;
   flex-flow: column;
   justify-content: flex-start;
   align-items: center;
