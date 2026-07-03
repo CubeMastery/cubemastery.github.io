@@ -2079,7 +2079,13 @@ textarea.w-input, textarea.w-select {
   font-size: 80px;
   line-height: 86px;
   position: absolute;
-  top: 50px;
+  top: 30px;
+}
+.subheading {
+  font-size: 30px;
+  line-height: 36px;
+  position: absolute;
+  top: 120px;
 }
 
 .countdown {
