@@ -8,12 +8,12 @@
     <meta property="og:type" content="website"/>
     <meta property="og:title" content="CubeCTF 2026"/>
     <meta property="og:description" content="All A/D, no AI. August 1, 10:00-18:00 EDT."/>
-    <meta property="og:image" content="https://avatars.githubusercontent.com/u/184881108?s=200&v=4"/>
+    <meta property="og:image" content="cubemastery.png"/>
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:title" content="CubeCTF 2026"/>
     <meta name="twitter:description" content="All A/D, no AI. August 1, 10:00-18:00 EDT."/>
-    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/184881108?s=200&v=4"/>
-    <link rel="icon" href="https://avatars.githubusercontent.com/u/184881108?s=200&v=4"/>
+    <meta name="twitter:image" content="cubemastery.png"/>
+    <link rel="icon" href="cubemastery-small.png"/>
     <style>
         * {
             box-sizing: border-box;
@@ -21,17 +21,11 @@
 
         html {
             height: 100%;
+            scroll-behavior: smooth;
         }
 
         body {
-            min-height: 100vh;
             margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-            padding: 50px 28px;
             text-align: center;
             color: #e2e2e2;
             background-color: #1f1f1f;
@@ -39,7 +33,19 @@
             font-family: monospace;
         }
 
-        h1, h2, h3 {
+        .hero {
+            height: 100vh;
+            height: 100svh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 35px 25px;
+        }
+
+        h1, h2, h3, h4 {
             margin: 0;
             font-weight: bold;
         }
@@ -57,7 +63,7 @@
             width: 100%;
             max-width: 480px;
             min-height: 0;
-            background-image: url("https://cdn.prod.website-files.com/67c60bc4fdf338751e5d36ca/67c669136e1a691c406db2ec_CubeMasteryLogo.png");
+            background-image: url("cubemastery.png");
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
@@ -102,18 +108,94 @@
         a {
             text-decoration: none;
         }
+
+        .info a {
+            color: #0070a0;
+        }
+
+        .info a:hover {
+            text-decoration: underline;
+        }
+
+        .scroll-hint {
+            font-weight: normal;
+            font-size: clamp(12px, 3vw, 16px);
+            color: #a0a0a0;
+        }
+
+        .scroll-hint a {
+            color: inherit;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 80px 28px 60px;
+            text-align: left;
+        }
+
+        .info p {
+            margin: 0;
+            font-size: clamp(14px, 3vw, 17px);
+            line-height: 1.6;
+            color: #e2e2e2;
+        }
+
+        .rules h3 {
+            font-size: clamp(16px, 4vw, 22px);
+            margin-bottom: 12px;
+        }
+
+        .rules ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: clamp(13px, 2.8vw, 16px);
+        }
+
+        .rules li::before {
+            content: "\2022";
+            color: #0082f3;
+            margin-right: 8px;
+        }
     </style>
 </head>
 <body>
-<div class="top">
-    <h1 class="heading">CubeCTF 2026</h1>
-    <h2 class="subheading">All A/D, no AI</h2>
-</div>
-<div class="logo"></div>
-<div class="bottom">
-    <h3 class="countdown"><span>August&nbsp;1,</span> <span>10:00-18:00&nbsp;EDT</span></h3>
-    <h3 class="sponsorship"><a href="https://discord.gg/cRMNjdR4Ug" class="register">Registration/Rules on discord</a>
-    </h3>
+<section class="hero">
+    <div class="top">
+        <h1 class="heading">CubeCTF 2026</h1>
+        <h2 class="subheading">All A/D, no AI</h2>
+    </div>
+    <div class="logo"></div>
+    <div class="bottom">
+        <h3 class="countdown"><span>August&nbsp;1,</span> <span>10:00-18:00&nbsp;EDT</span></h3>
+        <h3 class="sponsorship"><a href="https://discord.gg/cRMNjdR4Ug" class="register">Register on Discord</a></h3>
+        <h4 class="scroll-hint"><a href="#info">\/ rules and info \/</a></h4>
+    </div>
+</section>
+<div class="info" id="info">
+    <p>This year CubeCTF will be an Attack/Defense CTF themed around human-in-the-loop. Vulnbox access is through a
+        web console, with package mirrors available for installing tools, and all other internet access blocked.
+		Agentic AI use is banned (you may ask AI questions, but may not run agents). Teams found violating the AI policy may be disqualified and publicly shamed.</p>
+    <p>Range infrastructure is hosted by <a href="https://glitchrange.com/">Glitch Range</a>. Since only terminal access is provided,
+	we recommend brushing up on vim, tcpdump and mitmproxy. See the <a href="https://glitchrange.com/docs">game format docs</a> for environment info</p>
+	<p>The goals of this event are to run a public beginner-friendly Attack/Defense CTF (while keeping all skill levels
+	engaged), and to experiment with mitigations against CTF slopping.  If those goals sound fun, register on Discord!</p>
+    <div class="rules">
+        <h3>Rules</h3>
+        <ul>
+            <li>No agentic AI usage</li>
+            <li>No denial of service</li>
+            <li>No attacking the infrastructure</li>
+        </ul>
+    </div>
 </div>
 </body>
 </html>
